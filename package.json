@@ -4,6 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-cli/image-nginx.git"
+  },
   "keywords": [
     "cloudy",
     "cloudy-image"
