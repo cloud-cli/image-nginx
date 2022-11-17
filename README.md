@@ -4,12 +4,9 @@ This is a [Nginx](https://www.nginx.com/resources/wiki/) base image for [Cloudy]
 
 ## Usage
 
-Create a Cloudy service configuration and use the type "nginx".
-
-```json
-{
-  "type": "nginx"
-}
+```bash
+docker build -t image .
+docker run --rm -v /path/to/assets:/home/app image
 ```
 
 ## Additional Nginx configuration
