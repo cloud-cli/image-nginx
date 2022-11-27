@@ -11,8 +11,8 @@ jobs:
       packages: write
 
     env:
-      TAG: ghcr.io/cloud-cli/node:${{ github.sha }}
-      LATEST_TAG: ghcr.io/cloud-cli/node:latest
+      TAG: ghcr.io/cloud-cli/nginx:${{ github.sha }}
+      LATEST_TAG: ghcr.io/cloud-cli/nginx:latest
 
     steps:
       - uses: actions/checkout@v3
@@ -56,7 +56,7 @@ jobs:
 
       - name: Build test image
         run: |
-          echo "FROM ghcr.io/cloud-cli/node:${{ github.sha }}"  >> test/Dockerfile
+          echo "FROM ghcr.io/cloud-cli/nginx:${{ github.sha }}"  >> test/Dockerfile
           echo "ADD . /home/app" >> test/Dockerfile
           cat test/Dockerfile
           docker build -t test test/
